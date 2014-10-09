@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733.0"/>
+    </dependencies>
+    <scenes>
+        <!--class Prefix:identifier View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MonkeyScratchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3"/>
+                        <viewControllerLayoutGuide type="bottom" id="4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="7" translatesAutoresizingMaskIntoConstraints="NO" scrollEnabled="NO">
+                                <rect key="frame" x="0.0" y="298" width="320" height="270"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6">
+                                    <size key="itemSize" width="75" height="75"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="25" minY="15" maxX="25" maxY="15"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8" reuseIdentifier="scratchCell" customClass="ScratchCell">
+                                        <rect key="frame" x="25" y="15" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="22" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" image="banana10.png">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" id="25" customClass="ScratchTicketView" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="Image" value="FillTexture2.png"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="bananaImage" destination="22" id="name-outlet-22"/>
+                                            <segue destination="46" kind="modal" id="52"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <constraints>
+                                    <constraint firstItem="7" firstAttribute="width" constant="320" id="109"/>
+                                    <constraint firstItem="7" firstAttribute="height" constant="270" id="110"/>
+                                </constraints>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="0"/>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="5" translatesAutoresizingMaskIntoConstraints="NO" image="MonkeyScratchLogo.png">
+                                <rect key="frame" x="0.0" y="20" width="320" height="259"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="47" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="0.0" id="72"/>
+                            <constraint firstItem="5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="0.0" id="86"/>
+                            <constraint firstItem="5" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" constant="0.0" id="87"/>
+                            <constraint firstItem="5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" id="96"/>
+                            <constraint firstItem="7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" constant="0.0" id="107"/>
+                            <constraint firstItem="7" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="149" id="120" priority="750"/>
+                            <constraint firstItem="7" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottom" constant="0.0" id="133" relation="lessthanorequal"/>
+                            <constraint firstItem="7" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="0.0" id="134" relation="greaterthanorequal"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="7" id="name-outlet-7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <scene sceneID="45">
+            <objects>
+                <viewController id="46" sceneMemberID="viewController" modalTransitionStyle="crossDissolve">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="43"/>
+                        <viewControllerLayoutGuide type="bottom" id="44"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="47">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You found the bananas!" lineBreakMode="tailTruncation" minimumFontSize="10" id="50" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2" textAlignment="center">
+                                <rect key="frame" x="0.0" y="104" width="320" height="76"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="51" translatesAutoresizingMaskIntoConstraints="NO" image="banana10.png">
+                                <rect key="frame" x="80" y="203.5" width="160" height="149"/>
+                                <constraints>
+                                    <constraint firstItem="51" firstAttribute="height" constant="149" id="151"/>
+                                    <constraint firstItem="51" firstAttribute="width" constant="160" id="152"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yes, we have some bananas!" lineBreakMode="tailTruncation" minimumFontSize="10" id="63" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="0.0" y="415" width="320" height="22"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="51" firstAttribute="centerX" secondItem="47" secondAttribute="centerX" constant="0.0" id="149"/>
+                            <constraint firstItem="47" firstAttribute="centerY" secondItem="51" secondAttribute="centerY" constant="6" id="150"/>
+                            <constraint firstItem="50" firstAttribute="centerY" secondItem="47" secondAttribute="centerY" constant="0.0" id="153" multiplier="0.5"/>
+                            <constraint firstItem="50" firstAttribute="leading" secondItem="47" secondAttribute="leading" constant="0.0" id="154"/>
+                            <constraint firstItem="50" firstAttribute="trailing" secondItem="47" secondAttribute="trailing" constant="0.0" id="155"/>
+                            <constraint firstItem="63" firstAttribute="leading" secondItem="47" secondAttribute="leading" constant="0.0" id="156"/>
+                            <constraint firstItem="63" firstAttribute="trailing" secondItem="47" secondAttribute="trailing" constant="0.0" id="157"/>
+                            <constraint firstItem="63" firstAttribute="centerY" secondItem="47" secondAttribute="centerY" constant="0.0" id="158" multiplier="1.5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="15"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <resources>
+        <image name="Default-568h.png" width="640" height="1136"/>
+        <image name="banana10.png" width="800" height="800"/>
+        <image name="FillTexture2.png" width="10" height="10"/>
+        <image name="MonkeyScratchLogo.png" width="335" height="259"/>
+    </resources>
+</document>
